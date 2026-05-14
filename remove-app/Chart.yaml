@@ -1,0 +1,6 @@
+apiVersion: v2
+name: remove-app
+description: Helm chart for remove-app (static SPA via serve on port 3000)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

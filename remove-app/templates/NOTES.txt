@@ -1,0 +1,8 @@
+Чарт {{ .Chart.Name }} (версия чарта {{ .Chart.Version }}) установлен как релиз {{ .Release.Name }} в namespace {{ .Release.Namespace }}.
+
+Образ: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+
+Проброс порта на локальную машину:
+  kubectl port-forward svc/{{ include "remove-app.fullname" . }} 8080:{{ .Values.service.port }} -n {{ .Release.Namespace }}
+
+Откройте в браузере: http://127.0.0.1:8080/
