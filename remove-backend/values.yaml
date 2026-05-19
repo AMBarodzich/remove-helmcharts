@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: "123456789012.dkr.ecr.us-east-1.amazonaws.com/lesson23-remove-backend"
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "fb3f2a0d96547708804c43835242f9e695d86acf"
 
 imagePullSecrets: []
 
