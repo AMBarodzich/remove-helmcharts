@@ -3,6 +3,7 @@ replicaCount: 2
 image:
   # Полный URI без тега, например: 123456789012.dkr.ecr.us-east-1.amazonaws.com/lesson23-app
   repository: "123456789012.dkr.ecr.us-east-1.amazonaws.com/lesson23-app"
+  # Тег обновляет GitHub Actions в remove-app после push в ECR (commit SHA).
   pullPolicy: IfNotPresent
   tag: "latest"
 

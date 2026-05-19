@@ -13,7 +13,7 @@ helm upgrade --install remove-app ./remove-app \
   --set image.tag=latest
 ```
 
-`image.repository` — URI ECR **без тега** (как в `terraform output` / консоли AWS). Тег образа — `image.tag` (например SHA коммита или `latest`).
+`image.repository` — URI ECR **без тега** (подставляет Argo CD Application из Terraform). Тег `image.tag` после каждой сборки **remove-app** обновляет GitHub Actions (commit SHA) — Argo CD подхватывает изменение и делает sync.
 
 Проверка без установки:
 
