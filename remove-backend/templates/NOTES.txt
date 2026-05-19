@@ -1,0 +1,5 @@
+Чарт {{ .Chart.Name }} установлен как {{ .Release.Name }} в namespace {{ .Release.Namespace }}.
+
+Образ: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+
+  kubectl port-forward svc/{{ include "remove-backend.fullname" . }} 8080:{{ .Values.service.port }} -n {{ .Release.Namespace }}
